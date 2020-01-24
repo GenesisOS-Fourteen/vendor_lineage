@@ -118,6 +118,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     build-manifest
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images \
+    product_charger_res_images_vendor
+
 # Lineage packages
 ifeq ($(PRODUCT_IS_ATV),)
 PRODUCT_PACKAGES += \
