@@ -270,6 +270,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 
+# Certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
 # Fonts
 include vendor/lineage/config/fonts.mk
 
