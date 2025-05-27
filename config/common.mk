@@ -111,10 +111,8 @@ $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(LINEAGE_BUI
 endif
 
 # Bootanimation
-TARGET_SCREEN_WIDTH ?= 1080
-TARGET_SCREEN_HEIGHT ?= 1920
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
 
 # Build Manifest
 PRODUCT_PACKAGES += \
@@ -134,11 +132,7 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_PACKAGES += \
-    LineageSettingsProvider \
-    Updater
-
-PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
+    LineageSettingsProvider
 
 # Config
 PRODUCT_PACKAGES += \
